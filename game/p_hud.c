@@ -305,23 +305,23 @@ void HelpComputer (edict_t *ent)
 	char	*sk;
 
 	if (skill->value == 0)
-		sk = "easy";
+		sk = "Simple";
 	else if (skill->value == 1)
-		sk = "medium";
+		sk = "Normal";
 	else if (skill->value == 2)
-		sk = "hard";
+		sk = "Proud";
 	else
-		sk = "hard+";
+		sk = "Critical";
 
 	// send the layout
 	Com_sprintf (string, sizeof(string),
 		"xv 32 yv 8 picn help "			// background
 		"xv 202 yv 12 string2 \"%s\" "		// skill
-		"xv 0 yv 24 cstring2 \"%s\" "		// level name
-		"xv 0 yv 54 cstring2 \"%s\" "		// help 1
-		"xv 0 yv 110 cstring2 \"%s\" "		// help 2
-		"xv 50 yv 164 string2 \" kills     goals    secrets\" "
-		"xv 50 yv 172 string2 \"%3i/%3i     %i/%i       %i/%i\" ", 
+		"xv 0 yv 24 cstring2 \"Combat the Heartless!\" "		// level name
+		"xv 0 yv 54 cstring2 \"Numkeys for weapons/spells \n Shift to dodge roll \n Items are ground pickups\" "		// help 1
+		"xv 0 yv 110 cstring2 \"Hold space to fly \n \" "		// help 2
+		"xv 50 yv 164 string2 \" Follow	   your     heart!\" "
+		"xv 50 yv 172 string2 \"\" ", 
 		sk,
 		level.level_name,
 		game.helpmessage1,
